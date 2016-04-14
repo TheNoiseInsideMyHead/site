@@ -131,6 +131,7 @@ body {
 }
 img {
   min-width: 100%;
+  margin-top: 5px;
 }
 .marg {
   margin-top: 3%;
@@ -155,4 +156,10 @@ a {
   z-index: 1;
   box-shadow: 0px -10px 0 0 #4fc7f4, inset 0 -1px 0px 0 #4fc7f4;
   border: none;
+}
+.blue {
+  background: #4fc7f4 !important;
+}
+.backgr {
+  background: #4fc7f4;
 }
