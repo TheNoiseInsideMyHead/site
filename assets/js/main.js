@@ -1,67 +1,33 @@
-(function($) {
+window.onload = function () {
+    //TakeObjeckt//
+    function $(id) {
+        return document.getElementById(id);
+    }
+    //UpdateCurrentPosition//
+    navigator.geolocation.getCurrentPosition(updatePosition);
 
-	skel.breakpoints({
-		wide: '(max-width: 1680px)',
-		normal: '(max-width: 1280px)',
-		narrow: '(max-width: 980px)',
-		narrower: '(max-width: 840px)',
-		mobile: '(max-width: 736px)',
-		mobilep: '(max-width: 480px)'
-	});
+    function updatePosition(pos) {
+        var position = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+        //CreateGoogleMaps//
+        var map = new google.maps.Map($('map'), {
+            center: position,
+            zoom: 4,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+        //CreateMarker//    
+        var marker = new google.maps.Marker({
+            position: position,
+            map: map,
+            title: 'Кликните для приближения'
+        });
+        marker.addListener('click', function () {
+            map.setZoom(8);
+        });
+        map.addListener('center_changed', function () {
+            window.setTimeout(function () {
+                map.panTo(marker.getPosition());
+            }, 3000);
+        });
 
-	$(function() {
-
-		var	$window = $(window),
-		$body = $('body');
-
-			skel.on('+narrower -narrower', function() {
-				$.prioritize(
-					'.important\\28 narrower\\29',
-					skel.breakpoint('narrower').active
-				);
-			});
-
-		// Dropdowns.
-			$('#nav > ul').dropotron({
-				offsetY: -15,
-				hoverDelay: 0,
-				alignment: 'center'
-			});
-
-			// Title Bar.
-				$(
-					'<div id="titleBar">' +
-						'<a href="#navPanel" class="toggle"></a>' +
-						'<span class="title">' + $('#logo').html() + '</span>' +
-					'</div>'
-				)
-					.appendTo($body);
-
-			// Navigation Panel.
-				$(
-					'<div id="navPanel">' +
-						'<nav>' +
-							$('#nav').navList() +
-						'</nav>' +
-					'</div>'
-				)
-					.appendTo($body)
-					.panel({
-						delay: 500,
-						hideOnClick: true,
-						hideOnSwipe: true,
-						resetScroll: true,
-						resetForms: true,
-						side: 'left',
-						target: $body,
-						visibleClass: 'navPanel-visible'
-					});
-
-			// Fix: Remove navPanel transitions on WP<10 (poor/buggy performance).
-				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
-					$('#titleBar, #navPanel, #page-wrapper')
-						.css('transition', 'none');
-
-	});
-
-})(jQuery);
+    }
+}

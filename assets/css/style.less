@@ -140,7 +140,6 @@ body {
 
 img {
     min-width: 100%;
-    margin-top: 5px;
 }
 
 .marg {
@@ -148,9 +147,11 @@ img {
 }
 
 @someColor: rgb(79,199,244);
+@someColorO: rgba(79,199,244,0.3);
+
 .boxSh {
     z-index: 1;
-    box-shadow: 0px 10px 0 0 @someColor, inset 0 -1px 0px 0 @someColor;
+//    box-shadow: 0px 1px 0 0 @someColor, inset 0 -1px 0px 0 @someColor;
     border: none;
 }
 
@@ -170,13 +171,30 @@ a {
 
 .boxShTop {
     z-index: 1;
-    box-shadow: 0px -10px 0 0 @someColor, inset 0 -1px 0px 0 @someColor;
+//    box-shadow: 0px -1px 0 0 @someColor, inset 0 -0px 0px 0 @someColor;
     border: none;
 }
 .blue{
-    background: @someColor !important;
+    background: @someColor;
 }
 .backgr{
     background: @someColor;
 }
+.important {
+  margin-top: 5%;  
+}
 
+.lr {
+   margin: 2% 15%;
+   background: transparent;
+   
+}
+
+#map {
+    height: 400px;
+    margin: 0% 0;
+}
+
+.white {
+    background: rgb(255,255,255);
+}
