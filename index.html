@@ -22,7 +22,7 @@
     <!--Header-->
     <div class="container-fluid">
         <div class="row marg">
-            <div class="navbar navbar-inverse boxSh">
+            <div class="navbar navbar-inverse  boxSh ">
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#resposive-menu">
@@ -34,16 +34,46 @@
                     <div class="collapse navbar-collapse" id="resposive-menu">
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="col-lg-4 col-md-3 col-xs-0"></div>
-                                <div class="col-lg-4 col-md-6 col-xs-12">
-                                    <ul class="nav navbar-nav">
-                                        <li class="hov"><a href="#">some1</a></li>
-                                        <li class="hov"><a href="#">some2</a></li>
-                                        <li class="hov"><a href="#">some3</a></li>
-                                        <li class="hov"><a href="#">some4</a></li>
+                                <div class="col-lg-2 col-md-2 col-xs-0"></div>
+                                <div class="col-lg-8 col-md-8 col-xs-12">
+                                    <ul class="nav navbar-nav ">
+                                        <li class="hov dropdown">
+                                            <a href="#" class="dropdown-toggle drop" data-toggle="dropdown">Кафедра<b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Історія</a></li>
+                                                <li><a href="#">Викладачі</a></li>
+                                                <li><a href="#">Дисципліни</a></li>
+                                                <li><a href="#">Наукові дослідження</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="hov dropdown">
+                                            <a href="#" class="dropdown-toggle drop" data-toggle="dropdown">Абітурієнту<b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Вступ на 1-й курс</a></li>
+                                                <li><a href="#">Вступ на 5-й курс</a></li>
+                                                <li><a href="#">Працевлаштування</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="hov dropdown">
+                                            <a href="#" class="dropdown-toggle drop" data-toggle="dropdown">Студенту<b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Практика</a></li>
+                                                <li><a href="#">Розклад</a></li>
+                                                <li><a href="#">Працевлаштування</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="hov dropdown">
+                                            <a href="#" class="dropdown-toggle drop" data-toggle="dropdown">Бібліотека<b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Методичні вказівки</a></li>
+                                                <li><a href="#">Статті</a></li>
+                                                <li><a href="#">Курсові</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="hov"><a href="#">Розклад</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-lg-4 col-md-3 col-xs-0"></div>
+                                <div class="col-lg-2 col-md-2 col-xs-0"></div>
                             </div>
                         </div>
                     </div>
@@ -57,7 +87,19 @@
                         <img src="images/banner.jpg" alt="" class="img-responsive">
                     </div>
                     <div class="col-lg-3">
-
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <a href="#" class="newnav">Дипломнику</a>
+                                </div>
+                                <div class="col-lg-12">
+                                    <a href="#" class="newnav">Міжнародна діяльність</a>
+                                </div>
+                                <div class="col-lg-12">
+                                    <a href="#" class="newnav">Конференції</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -70,15 +112,18 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Important-->
     <div class="container-fluid white">
-        <div class="row important">
+        <div class="row">
+            <img src="images/questions.svg" alt="" class="quest">
+        </div>
+        <div class="row">
             <div class="col-lg-12">
                 <div class="col-lg-4">
                     <div class="row">
                         <div class="thumbnail lr">
-                           <img src="images/icon1.svg" alt="" class="img-circle">
+                            <img src="images/icon1.svg" alt="" class="img-circle">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, dolor nemo amet distinctio. Ipsa ipsum harum veniam sapiente nesciunt, quaerat fugiat eveniet ratione id quam culpa, odio pariatur cumque architecto.</p>
                         </div>
                     </div>
@@ -94,7 +139,7 @@
                 <div class="col-lg-4">
                     <div class="row">
                         <div class="thumbnail lr">
-                            <img src="images/icon1.svg" alt="" class="img-circle">
+                            <img src="images/icon3.svg" alt="" class="img-circle">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, dolor nemo amet distinctio. Ipsa ipsum harum veniam sapiente nesciunt, quaerat fugiat eveniet ratione id quam culpa, odio pariatur cumque architecto.</p>
                         </div>
                     </div>
@@ -102,7 +147,7 @@
             </div>
         </div>
     </div>
-   
+
     <div class="container-fluid">
         <div class="row">
             <div class="thumbnail" id="map"></div>

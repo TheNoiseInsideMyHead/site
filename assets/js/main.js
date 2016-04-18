@@ -1,6 +1,6 @@
 window.onload = function () {
     //TakeObjeckt//
-    function $(id) {
+    function get(id) {
         return document.getElementById(id);
     }
     //UpdateCurrentPosition//
@@ -9,9 +9,9 @@ window.onload = function () {
     function updatePosition(pos) {
         var position = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
         //CreateGoogleMaps//
-        var map = new google.maps.Map($('map'), {
+        var map = new google.maps.Map(get('map'), {
             center: position,
-            zoom: 4,
+            zoom: 16,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
         //CreateMarker//    
@@ -30,4 +30,19 @@ window.onload = function () {
         });
 
     }
+    //jQuery Scroll//
+    $(window).scroll(function(){
+        if($(window).scrollTop() >  $('div.row > div.boxShTop').offset().top + 50){
+            $('.marg').addClass('navbar-fixed-top');
+            $('.marg').addClass('toTop');
+            $('.backgr').css("margin-top","6%");
+            
+    }else{
+        $('.marg').removeClass('navbar-fixed-top');
+        $('.marg').removeClass('toTop');
+        $('.backgr').css("margin-top","0");
+
+                     }
+    });
+    
 }
