@@ -7,16 +7,20 @@ window.onload = function () {
     navigator.geolocation.getCurrentPosition(updatePosition);
 
     function updatePosition(pos) {
-        var position = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+//        var position = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+        mypos = {
+            lat: 50.4495085,
+            lng: 30.453472299999998
+        };
         //CreateGoogleMaps//
         var map = new google.maps.Map(get('map'), {
-            center: position,
+            center: mypos,
             zoom: 16,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
         //CreateMarker//    
         var marker = new google.maps.Marker({
-            position: position,
+            position: mypos,
             map: map,
             title: 'Кликните для приближения'
         });
@@ -46,3 +50,4 @@ window.onload = function () {
     });
     
 }
+
