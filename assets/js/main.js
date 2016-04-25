@@ -7,7 +7,7 @@ window.onload = function () {
     navigator.geolocation.getCurrentPosition(updatePosition);
 
     function updatePosition(pos) {
-//        var position = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+//        var mypos = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
         mypos = {
             lat: 50.4495085,
             lng: 30.453472299999998
@@ -45,9 +45,19 @@ window.onload = function () {
         $('.marg').removeClass('navbar-fixed-top');
         $('.marg').removeClass('toTop');
         $('.backgr').css("margin-top","0");
-
                      }
     });
     
 }
+
+//$(function(){
+//    var documentEl = $(document),
+//        parallaxBg = $('div.parallax-bg');
+//
+//    documentEl.on('scroll', function(){
+//        var currScrollPos = documentEl.scrollTop();
+//        parallaxBg.css('background-position','0' +- currScrollPos/10 + 'px');
+//    });
+//})
+
 
