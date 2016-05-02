@@ -136,7 +136,7 @@ img {
   padding: 0;
 }
 .marg {
-  margin-top: 3%;
+  margin-top: 0%;
 }
 .boxSh {
   z-index: 1;
@@ -284,4 +284,8 @@ div a.newnav:hover {
 }
 .noto {
   opacity: 1 !important;
+}
+.margin {
+  margin: 0;
+  padding: 0;
 }

@@ -8,9 +8,10 @@ window.onload = function () {
 
     function updatePosition(pos) {
 //        var mypos = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+//        console.log(pos.coords.latitude + '\n' + pos.coords.longitude);
         mypos = {
-            lat: 50.4495085,
-            lng: 30.453472299999998
+                    lat: 50.447,
+                    lng: 30.46068
         };
         //CreateGoogleMaps//
         var map = new google.maps.Map(get('map'), {
@@ -39,7 +40,7 @@ window.onload = function () {
         if($(window).scrollTop() >  $('div.row > div.boxShTop').offset().top + 50){
             $('.marg').addClass('navbar-fixed-top');
             $('.marg').addClass('toTop');
-            $('.backgr').css("margin-top","6%");
+            $('.backgr').css("margin-top","50px");
             
     }else{
         $('.marg').removeClass('navbar-fixed-top');
@@ -49,15 +50,4 @@ window.onload = function () {
     });
     
 }
-
-//$(function(){
-//    var documentEl = $(document),
-//        parallaxBg = $('div.parallax-bg');
-//
-//    documentEl.on('scroll', function(){
-//        var currScrollPos = documentEl.scrollTop();
-//        parallaxBg.css('background-position','0' +- currScrollPos/10 + 'px');
-//    });
-//})
-
 
