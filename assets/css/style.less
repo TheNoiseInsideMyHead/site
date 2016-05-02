@@ -136,7 +136,7 @@ body {
     background: url(images/littleknobs.png);
 }
 
-img {
+img:not(.myim) {
     min-width: 100%;
     margin: 0;
     padding: 0;
@@ -223,7 +223,7 @@ div a.newnav{
     color: @greyColor;
     text-shadow: 0 1px 1px @greyColor;
 }
-div a.newnav:hover{
+div .newnav:hover{
     box-shadow:inset 1000px 0px 0 0 rgba(56,56,56,0.2),inset 0px -3px 0 0 @greyColor;
     color: @greyColor;
     text-shadow: 0 1px 1px @greyColor;
@@ -250,7 +250,7 @@ div a.newnav:hover{
     }
 }
 .quest{
-    margin-top: 5%;
+    margin-top: 5% !important;
 }
 .nopad {
     padding:0px;
@@ -259,33 +259,14 @@ div a.newnav:hover{
 .news {
     position: absolute;
     top:75%;
-    width: 100%;
+    width: 80%;
     height: 25%;
     background: url(images/Untitled-1.png);
 }
-//.newsbutton {
-//    text-decoration: none;
-//    margin: 35px auto;
-//    display: block;
-//    padding: 20px;
-//    text-align: center;
-//    color: white;
-//    background: transparent;
-//    box-shadow: inset 1px 0px 0 0px rgb(255, 255, 255);
-//    -webkit-transition: 0.5s;
-//    transition: 0.5s;
-//}
-//.newsbutton:hover{
-//    box-shadow:inset 500px 0px 0 0px rgb(255,255,255);
-//    text-decoration: none;
-//    color: @greyColor;
-//}
-//.newsbutton:focus{ 
-////    color: #fff;
-//    text-decoration: none;
-//}
+
 .find {
-    margin-bottom: 5%;
+    margin-bottom: 2%;
+    margin-top: 0%;
 }
 .question {
 position: absolute;
@@ -295,18 +276,10 @@ font-size: 30px;
 font-weight: 600;
     color: rgb(7, 97, 131);
 }
-//.parallax-bg {
-//    z-index: 0;
-//    background-image: url(images/city_perspective-wallpaper-2048x1152.jpg);
-//    background-repeat: no-repeat;
-//    background-size: cover;
-//    background-attachment: fixed;
-//    -webkit-transition: all 0.3s ease;
-//    transition:  all 0.3s ease;
-//    
-//}
 .mwrapper {
     background: rgba(190, 190, 190,0.8);
+    margin: 5% -15px; 
+    margin-top: 1%;
 }
 .contact {
     margin-top: 5%;
@@ -328,7 +301,7 @@ font-weight: 600;
 }
 
 .findus {
-    margin-top: 20%;
+    margin-top: 20% !important;
 }
 .mybtn{
     margin: 0 !important;
@@ -348,4 +321,52 @@ font-weight: 600;
 .margin {
     margin: 0;
     padding: 0;
+}
+
+.ma {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.links {
+    width: 50px;
+}
+.vk:hover {
+    background: rgb(24, 120, 232);
+}
+.fb:hover{
+    background: rgb(59, 89, 152);
+}
+.tw:hover{
+    background: rgb(29, 202, 255);
+}
+.gplus:hover{
+    background: rgb(221, 75, 57);
+}
+.bot {
+box-shadow: 0px 3px 0 0 rgb(34,34,34) !important;
+}
+.newsButton {
+    position: absolute;
+    left: 80%;
+    top:75%;
+    width: 20%;
+    height: 25%;
+    background: rgb(255,255,255);
+    transition: 0.3s;
+    text-decoration: none;
+}
+.newsButton:hover{
+    box-shadow: inset 0px 0px 50px 100px rgba(20, 183, 145, 0.5);
+    text-decoration: none !important;
+    color: white;
+}
+.ourNews {
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: 17%;
+}
+@media (max-width: 768px){
+    .ourNews{
+        font-size: 15px;
+    }
 }
