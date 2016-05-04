@@ -1,135 +1,150 @@
 <!DOCTYPE HTML>
 
-<html lang="ru">
+<html ng-app="SampleApp">
 
-    <head>
-        <title>ПСНК - Прилади та системи неруйнівного контролю</title>
-        <meta charset="utf-8" />
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-        <!--    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />-->
-        <link href="../css/bootstrap.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/style.less" type="text/less">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-        <link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHmaTUiNxv-77FHmyqSGtOOk6ZyOVekUA&callback=initMap">
-        </script>
-        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-    </head>
+<head>
+    <title>ПСНК - Прилади та системи неруйнівного контролю</title>
+    <meta charset="utf-8" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="../js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <!--    <link rel="stylesheet" href="../css/style.less" type="text/less">-->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHmaTUiNxv-77FHmyqSGtOOk6ZyOVekUA&callback=initMap"></script>
+    <script src="../js/angular.js"></script>
 
-    <body>
-        <!--Header-->
-        <div class="container-fluid">
-            <div class="row marg">
-                <div class="navbar navbar-inverse  boxSh ">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#resposive-menu">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        <div class="collapse navbar-collapse" id="resposive-menu">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="col-lg-2 col-md-2 col-xs-0"></div>
-                                    <div class="col-lg-8 col-md-8 col-xs-12">
-                                        <ul class="nav navbar-nav ">
-                                            <li class="hov dropdown">
-                                                <a href="#" class="dropdown-toggle drop" data-toggle="dropdown">Кафедра<b class="caret"></b></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#">Історія</a></li>
-                                                    <li><a href="#">Викладачі</a></li>
-                                                    <li><a href="#">Дисципліни</a></li>
-                                                    <li><a href="#">Наукові дослідження</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="hov dropdown">
-                                                <a href="#" class="dropdown-toggle drop" data-toggle="dropdown">Абітурієнту<b class="caret"></b></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#">Вступ на 1-й курс</a></li>
-                                                    <li><a href="#">Вступ на 5-й курс</a></li>
-                                                    <li><a href="#">Працевлаштування</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="hov dropdown">
-                                                <a href="#" class="dropdown-toggle drop" data-toggle="dropdown">Студенту<b class="caret"></b></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#">Практика</a></li>
-                                                    <li><a href="#">Розклад</a></li>
-                                                    <li><a href="#">Працевлаштування</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="hov dropdown">
-                                                <a href="#" class="dropdown-toggle drop" data-toggle="dropdown">Бібліотека<b class="caret"></b></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#">Методичні вказівки</a></li>
-                                                    <li><a href="#">Статті</a></li>
-                                                    <li><a href="#">Курсові</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="hov"><a href="#">Розклад</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-2 col-md-2 col-xs-0"></div>
-                                </div>
-                            </div>
-                        </div>
+    <!--[if lte IE 8]><link rel="stylesheet" href="../css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="../css/ie9.css" /><![endif]-->
+</head>
+
+<body>
+
+    <!--Header-->
+    <div class="container-fluid">
+        <div class="row marg">
+            <div class="navbar navbar-inverse  boxSh ">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#resposive-menu">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="../../index.html" class="navbar-brand visible-xs ma"><img src="../../images/icons/psnk.svg" class="ma" alt=""></a>
                     </div>
-                </div>
-            </div>
-            
-        
-<!-- Footer-->
-        <div class="container-fluid footer">
-            <div class="row">
-                <div class="col-lg-4">
-
-                </div>
-                <div class="col-lg-4">
-
-                </div>
-                <div class="col-lg-4">
-                    <img src="../../images/howfind.svg" alt="" class='findus'>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="row">
-                        <nav class="navbar navbar-inverse noto">
-                            <div class="col-lg-4 col-lg-push-4">
-                                <div class="row">
-                                    <ul class="list-group">
-                                        <li class="list-group-item"><a href="g"><img src="../../images/google.svg" alt="" class="img-responsive"></a></li>
-                                        <li class="list-group-item"><a href="t"><img src="../../images/tw.svg" alt="" class="img-responsive"></a></li>
-                                        <li class="list-group-item"><a href="f"><img src="../../images/fb.svg" alt="" class="img-responsive"></a></li>
-                                        <li class="list-group-item"><a href="v"><img src="../../images/vk.svg" alt="" class="img-responsive"></a></li>
+                    <div class="collapse navbar-collapse" id="resposive-menu">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="col-lg-2 col-md-2">
+                                    <a href="../../index.html" class="navbar-brand hidden-xs hidden-sm ma"><img src="../../images/icons/psnk.svg" class="ma" alt=""></a>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-xs-12">
+                                    <ul class="nav navbar-nav ">
+                                        <li class="hov dropdown">
+                                            <a href="#" class="dropdown-toggle drop" data-toggle="dropdown">Кафедра<b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Історія</a></li>
+                                                <li><a href="#">Викладачі</a></li>
+                                                <li><a href="#">Дисципліни</a></li>
+                                                <li><a href="#">Наукові дослідження</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="hov dropdown">
+                                            <a href="#" class="dropdown-toggle drop" data-toggle="dropdown">Абітурієнту<b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Вступ на 1-й курс</a></li>
+                                                <li><a href="#">Вступ на 5-й курс</a></li>
+                                                <li><a href="#">Працевлаштування</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="hov dropdown">
+                                            <a href="#" class="dropdown-toggle drop" data-toggle="dropdown">Студенту<b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Практика</a></li>
+                                                <li><a href="#">Розклад</a></li>
+                                                <li><a href="#">Працевлаштування</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="hov dropdown">
+                                            <a href="#" class="dropdown-toggle drop" data-toggle="dropdown">Бібліотека<b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Методичні вказівки</a></li>
+                                                <li><a href="#">Статті</a></li>
+                                                <li><a href="#">Курсові</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="hov"><a href="#">Розклад</a></li>
                                     </ul>
                                 </div>
+                                <div class="col-lg-2 col-md-2 col-xs-0"></div>
                             </div>
-                        </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Search-->
+        <div class="row search">
+            <div class="col-lg-8 col-lg-push-4">
+                <input type="text" placeholder="Що вас цікавить?" class="marginSearch">
+                <a href="#" class="findit">asda</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid mywrapper">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-lg-push-1">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Active</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Another link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Disabled</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Disabled</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
                     </div>
                 </div>
             </div>
         </div>
         
+        <div ng-controller="SampleAppCtrl">
+            
+            <ng-include src="url"></ng-include>
+
+        </div>
+        
 
 
-    <!-- Scripts -->
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/jquery.dropotron.min.js"></script>
-    <script src="../js/util.js"></script>
-    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-    <script src="../js/main.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/less.js"></script>
 
 
-    </body>
+
+
+
+        <!-- Scripts -->
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/jquery.dropotron.min.js"></script>
+        <script src="../js/util.js"></script>
+        <!--[if lte IE 8]><script src="../js/ie/respond.min.js"></script><![endif]-->
+        <script src="../js/main.js"></script>
+        <script src="../js/less.js"></script>
+
+
+</body>
 
 </html>
