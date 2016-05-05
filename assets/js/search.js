@@ -1,0 +1,4 @@
+$(function(){
+    var search = $('searc');
+    
+});
